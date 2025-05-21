@@ -4,7 +4,7 @@
 
 @layer base {
   html, body, #root {
-    @apply flex flex-col w-full h-full bg-no-repeat bg-cover;
+    @apply flex flex-col w-full h-full bg-no-repeat bg-cover m-0;
     font-family: 'Bangers', cursive;
   }
 }

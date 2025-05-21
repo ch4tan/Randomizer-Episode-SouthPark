@@ -9,18 +9,18 @@ import Footer from './layouts/Footer'
 import ErrorNotFound from './Pages/404';
 
 function App() {
-  const [darkmode, setDarkMode] = useState(false);
+  const [darkmode, setDarkMode] = useState(true);
 
   return (
     <>
       <BrowserRouter>
         <NavContext.Provider value={{ darkmode, setDarkMode }}>
           <NavBar />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='*' element={<ErrorNotFound />} />
-          </Routes>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='*' element={<ErrorNotFound />} />
+            </Routes>
           <Footer />
         </NavContext.Provider >
       </BrowserRouter>

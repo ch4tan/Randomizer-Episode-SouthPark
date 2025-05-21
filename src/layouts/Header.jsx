@@ -7,7 +7,7 @@ function NavBar() {
     const [position, setPosition] = useState("/");
 
     return (
-        <header className={`flex w-full h-10 items-center justify-between pl-2 pr-2 ${ darkmode ? "bg-black" : "bg-white" }`}>
+        <header className={`flex w-full h-10 md:h-24 items-center justify-between pl-2 pr-2 ${ darkmode ? "bg-black" : "bg-white" }`}>
             <NavLink to={"/"}><img src="./assets/images/logoSP.png" alt="Not Found" className="flex w-20 h-16 py-1" onClick={() => setPosition("/")} /></NavLink>
                 {
                     position === "/"
@@ -38,8 +38,8 @@ function NavBar() {
             <button onClick={() => setDarkMode(!darkmode)} className="flex justify-center items-center left-48 rounded-full h-10 w-10 md:hover:bg-yellow-400">
             {
                 darkmode 
-                ? <img src="./assets/images/soleil.png" alt="Image Not Found" className="w-8 h-8 md:hover:w-10 md:hover:h-10 md:hover:rotate-180 md:transition-transform md:duration-1000" /> 
-                : <img className="w-8 h-8 md:hover:w-10 md:hover:h-10 md:hover:rotate-180 md:transition-transform md:duration-1000" src="./assets/images/lune.png" alt="Image Not Found" />
+                ? <img src="./assets/images/soleil.png" alt="Image Not Found" className="w-8 h-8 lg:hover:w-10 lg:hover:h-10 lg:hover:rotate-180 lg:transition-transform lg:duration-1000" /> 
+                : <img className="w-8 h-8 lg:hover:w-10 lg:hover:h-10 lg:hover:rotate-180 lg:transition-transform lg:duration-1000" src="./assets/images/lune.png" alt="Image Not Found" />
             }
             </button>
         </header>
